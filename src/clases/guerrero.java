@@ -7,6 +7,7 @@ public class guerrero extends personaje{
         super();
         this.resistencia = 10;
         this.vida = 100;
+        this.vidaMax = 100;
         this.ataque = 20;
         this.defensa = 1;
         this.rol = rol.GUERRERO;
@@ -58,6 +59,7 @@ public class guerrero extends personaje{
             this.ataque += 5;
             this.resistencia += 10;
             this.vida += 20;
+            this.vidaMax += 20;
             exp = 0;
 
             System.out.println(getNombre() + " subio de nivel");

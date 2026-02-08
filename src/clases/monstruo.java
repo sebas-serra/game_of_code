@@ -7,6 +7,7 @@ public class monstruo extends personaje{
         super();
         this.ataques = 0;
         this.vida = 80;
+        this.vidaMax = 80;
         this.ataque = 10;
         this.defensa = 1;
         this.rol = rol.MONSTRUO;
@@ -45,6 +46,7 @@ public class monstruo extends personaje{
             this.defensa += 1;
             this.ataque += 5;
             this.vida += 20;
+            this.vidaMax += 20;
             this.ataques += 1;
             System.out.println(getNombre() + " subio de nivel");
 

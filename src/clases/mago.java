@@ -6,6 +6,7 @@ public class mago extends personaje{
     public mago() {
         super();
         this.vida = 100;
+        this.vidaMax = 100;
         this.ataque = 10;
         this.defensa = 3;
         this.mana = 10;
@@ -54,6 +55,7 @@ public class mago extends personaje{
         this.ataque += 5;
         this.mana += 5;
         this.vida += 20;
+        this.vidaMax += 20;
             System.out.println(getNombre() + " subio de nivel");
         }
     }

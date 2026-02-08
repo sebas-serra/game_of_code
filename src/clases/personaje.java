@@ -7,6 +7,7 @@ public abstract class personaje implements cartas {
     protected rol rol;
     protected int nivel;
     protected int vida;
+    protected int vidaMax;
     protected int ataque;
     protected int defensa;
     protected int exp;
@@ -144,9 +145,22 @@ public abstract class personaje implements cartas {
         }
     }
 
-    public void usarCarta(String carta, personaje p) {
+    @Override
+    public void agarrarCarta() {
+        ArrayList <String> lista = new ArrayList();
+        lista.add("CURAR");
+        lista.add("SUBIR ATAQUE");
+        lista.add("SUBIR DEFENSA");
+        lista.add("SUBIR EXP");
+            int num = (int)(Math.random() * (lista.size()));
+            String carta = lista.get(num);
+            cartas.add(carta);
+    }
+
+    public void usarCarta(String carta) {
         if (carta.equals("CURAR")) {
             vida += 40;
+            if (vida > vidaMax) vida = vidaMax;
             System.out.println("+40 de vida\n");
         } else if (carta.equals("SUBIR ATAQUE")) {
             ataque += 3;
