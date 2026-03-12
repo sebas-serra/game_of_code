@@ -5,12 +5,19 @@ import java.util.Scanner;
 
 public class juego {
 
-    public void juegoMaquina() {
-        personaje warrior = new guerrero();
-        personaje mage = new mago();
-        personaje monster = new monstruo();
+    personaje warrior;
+    personaje mage;
+    personaje monster;
+    ArrayList<personaje> personajes;
 
-        ArrayList<personaje> personajes = new ArrayList<>();
+    public juego() {
+        this.warrior = new guerrero();
+        this.mage = new mago();
+        this.monster = new monstruo();
+        this.personajes = new ArrayList<>();
+    }
+
+    public void juegoMaquina() {
         personajes.add(warrior);
         personajes.add(mage);
         personajes.add(monster);
@@ -64,15 +71,15 @@ public class juego {
     public void juegoMulti() {
         Scanner sc = new Scanner(System.in);
 
-        personaje warrior = new guerrero();
-        personaje mage = new mago();
-        personaje monster = new monstruo();
+//        personaje warrior = new guerrero();
+//        personaje mage = new mago();
+//        personaje monster = new monstruo();
 
         warrior.crearCartas();
         mage.crearCartas();
         monster.crearCartas();
 
-        ArrayList<personaje> personajes = new ArrayList<>();
+//        ArrayList<personaje> personajes = new ArrayList<>();
         personajes.add(warrior);
         personajes.add(mage);
         personajes.add(monster);
